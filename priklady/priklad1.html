@@ -1,0 +1,174 @@
+<!DOCTYPE html>                                          
+<html lang="en">  
+
+<head>                                              
+    <meta charset="UTF-8">
+    <title>príklad2</title>
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+
+
+<body>
+
+  <section id="navigation">
+    <button class="btn" onclick="location.href='priklad.html';">Predchádzajúca stránka</button>
+    <button class="btn" onclick="location.href='priklad2.html';">Ďalšia stránka</button>
+</section>
+
+  <section id="headings"> 
+    <h1 class="header" id="header1">Hlavička 1</h1>
+    <h2 class="header" id="header2">Hlavička 2</h2>
+    <h3 class="header" id="header3">Hlavička 3</h3>
+    <h4 class="header" id="header4">Hlavička 4</h4>
+    <h5 class="header" id="header5">Hlavička 5</h5>
+</section>
+
+<section id="paragraphs">
+  <p>Toto je odstavec. Proin convallis accumsan justo, sit amet fermentum sapien posuere nec.</p>
+  <br>
+  <p>Duis semper purus nisl, vel hendrerit purus tristique id. Nuncnisi at, fermentum placerat metus. Nulla facilisi.</p>
+</section>
+
+<section id="links">
+  <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>
+  <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>
+  <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
+</section>
+
+<section id="tabulka"><table style="width:100%">                                                                                                             
+  <tr>                                                                                                                                
+      <th>Name</th>                                                                                                                   
+      <th>Age</th> 
+      <th>Country</th> 
+  </tr>
+  <tr>
+      <td>John</td>                                                                                                                   
+      <td>30</td>
+      <td>USA</td>
+  </tr>
+  <tr>
+      <td>Anna</td>
+      <td>25</td>
+      <td>Sweden</td>
+  </tr>
+</table>
+</section>
+
+<section id="list"><ul>                                                                                                                                   
+  <li>First Item</li>                                                                                                                 
+  <li>Second Item</li>
+  <li>Third Item</li>
+  <li>Fourth Item</li>
+  <li>Fifth Item</li>
+</ul></section>
+
+<section id="obrazok"><div>
+  <img src="webdevelopment.jpg" alt="HTML + CSS + JAVA">
+  </div></section>
+
+<section id="videozlinku">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/aVgeJ5eqlSM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>
+
+<section>
+  <blockquote cite="https://example.com">                                                                                            
+    This is a blockquote.
+</blockquote>
+</section>
+
+<section>
+  <video width="320" height="240" controls>                                                                                               
+    <source src="movie.mp4" type="video/mp4">                                                                                           
+    Your browser does not support the video tag.
+</video>
+</section>
+
+<section>
+  <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">                                                    
+    Your browser does not support the HTML canvas tag.
+</canvas>
+<script> <!-- Definuje skript -->
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+
+  // Nakreslenie tváre
+  ctx.beginPath();
+  ctx.arc(200, 200, 100, 0, Math.PI*2, true); // Vonkajší kruh
+  ctx.fillStyle = '#FFFF00'; // Žltá
+  ctx.fill();
+  ctx.stroke();
+
+  // Ľavé oko
+  ctx.beginPath();
+  ctx.arc(150, 175, 20, 0, Math.PI*2, true); // Ľavé oko
+  ctx.fillStyle = 'black'; // Black
+  ctx.fill();
+
+  // Pravé oko
+  ctx.beginPath();
+  ctx.arc(250, 175, 20, 0, Math.PI*2, true); // Pravé oko
+  ctx.fillStyle = 'black'; // Black
+  ctx.fill();
+
+  // Nakresliť úsmev
+  ctx.beginPath();
+  ctx.arc(200, 200, 60, 0, Math.PI, false);  // ústa
+  ctx.stroke();
+</script>
+</section>
+
+<section>
+  <form action="/submit_form" method="post">                          
+    <label for="fname">Meno:</label><br>                          
+    <input type="text" id="fname" name="fname">                    
+    <label for="lname">Priezvisko:</label><br>
+    <input type="text" id="lname" name="lname">
+    <input type="submit" value="Odoslať">                           
+</form>
+</section>
+
+<section>
+  <input type="password" id="pass" name="password">            
+    <input type="radio" id="male" name="gender" value="male">    
+    <input type="checkbox" id="option1" name="option1" value="1"> 
+    <input type="file" id="myfile" name="myfile">  
+</section>
+
+<section>
+  <select>                                                        
+    <option value="1">Option 1</option>                         
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+</select>
+</section>
+
+<section>
+  <div>
+    <textarea rows="4" cols="50"></textarea>   
+</div>     
+</section>
+
+<section>
+  <footer>
+      <div class="footer-container">
+          <p>This is a footer.</p>
+
+          <div class="contact-info">
+              <p>Asseco Central Europe</p>
+          </div>
+
+          <div class="social-media">
+              <a href="https://www.facebook.com/assecoce/?locale=sk_SK"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/asseco_ce/"><i class="fab fa-instagram"></i></a>
+              <a href="https://twitter.com/assecoce"><i class="fab fa-twitter"></i></a>
+          </div>
+      </div>
+  </footer>
+</section>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style/style3.css">
+    <style>
+        .rotate {
+            transition: all 0.5s linear;
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <section id="navigation">
+        <button class="btn" onclick="location.href='priklad2.html';">Predchádzajúca stránka</button>
+        <button class="btn" onclick="location.href='priklad4.html';">Ďalšia stránka</button>
+    </section>
+
+    <div>
+    <h2>Color Buttons</h2>
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('blue')">Blue</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="changeColor('yellow')">Yellow</button>
+</div>
+
+<div>
+    <h2>Rotating Replay Icon</h2>
+    <button id="replayBtn" onclick="rotate()" class="rotate">
+        ↻ 
+    </button>
+</div>
+
+    <div>
+    <h2>Change Color</h2>
+    <button onclick="changeButtonColor()" id="button1">Change Color</button>
+</div>
+
+    <div>
+    <h2>Your Information</h2>
+    <label for="name">Meno:</label><br>
+    <input type="text" id="name" required><br>
+    <label for="surname">Priezvisko:</label><br>
+    <input type="text" id="surname" required><br>
+    <button onclick="alertUser()">Submit</button>
+
+    <div class="alert" id="alert">
+        <div class="alert-content">
+            <p id="alert-message"></p>
+            <button class="alert-close" onclick="closeAlert()">Close</button>
+        </div>
+    </div>
+</div>
+
+
+    <script src="../script1.js"></script>
+</body>
+</html>

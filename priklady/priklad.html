@@ -1,0 +1,175 @@
+<!DOCTYPE html>                                                                                                                         <!-- Tento element je deklarácia typu dokumentu, definuje tento dokument ako HTML5 -->
+
+<html lang="en">                                                                                                                        <!-- Element html je koreňový element stránky HTML, atribút lang sa používa na deklaráciu jazyka webovej stránky -->
+
+<head>                                                                                                                                  <!-- Element head obsahuje metainformácie o dokumente -->
+    <meta charset="UTF-8">                                                                                                              <!-- Element meta charset sa používa na špecifikáciu kódovania znakov pre dokument HTML -->
+    <title>Moja webová stránka</title>                                                                                                  <!-- Element title špecifikuje názov dokumentu HTML -->
+    <style>                                                                                                                             /* Element style sa používa na vloženie štýlov CSS do dokumentu HTML */ 
+        body { background-color: lightblue; }
+        h1 { color: navy; }
+    </style>
+</head>
+
+<body>                                                                                                                                  <!-- Element body obsahuje obsah dokumentu, ako je text, obrázky atď -->
+    <button id="redirectButton" onclick="location.href='index.html';">predchádzajúca stránka</button>
+    <button id="redirectButton" onclick="location.href='priklad1.html';">Ďalšia stránka</button>
+    <h1>Hlavička 1</h1>                                                                                                                 <!-- Element h1 sa používa na definovanie najväčšej hlavičky -->
+    <h2 style="color: red;">Hlavička 2</h2>                                                                                           <!-- Element h2 sa používa na definovanie druhej najväčšej hlavičky. Môžeme pridať style priamo do elementu -->
+    <h3>Hlavička 3</h3>                                                                                                                 <!-- Element h3 sa používa na definovanie tretej najväčšej hlavičky -->
+    <h4>Hlavička 4</h4>                                                                                                                 <!-- Element h4 sa používa na definovanie štvrtej najväčšej hlavičky -->
+    <h5>Hlavička 5</h5>                                                                                                                 <!-- Element h5 sa používa na definovanie piatej najväčšej hlavičky -->
+
+    <p>Toto je odstavec. Proin convallis accumsan justo, sit amet fermentum sapien posuere nec.</p>                                     <!-- Element p sa používa na definovanie odstavca -->
+    <br>                                                                                                                                <!-- element sa používa na oddelenie textu -->
+    <p>Duis semper purus nisl, vel hendrerit purus tristique id. Nuncnisi at, fermentum placerat metus. Nulla facilisi.</p>             
+
+    <br>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>                                                                <!-- Element a sa používa na definovanie hypertextového odkazu -->
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
+
+    <br>
+    <br>
+
+     <!-- Dátová tabuľka s preddefinovanými dátami -->
+     <table style="width:100%">                                                                                                             <!--  Definuje tabuľku v HTML -->
+        <tr>                                                                                                                                <!--  Definuje riadok v tabuľke -->
+            <th>Name</th>                                                                                                                   <!--  Definuje hlavičkovú bunku v tabuľke -->
+            <th>Age</th> 
+            <th>Country</th> 
+        </tr>
+        <tr>
+            <td>John</td>                                                                                                                   <!-- Definuje bunku v tabuľke -->
+            <td>30</td>
+            <td>USA</td>
+        </tr>
+        <tr>
+            <td>Anna</td>
+            <td>25</td>
+            <td>Sweden</td>
+        </tr>
+    </table>
+
+
+                                                                                                                                            <!-- Zoznam s piatimi položkami -->
+     <ul>                                                                                                                                   <!-- Definuje neusporiadaný zoznam -->
+        <li>First Item</li>                                                                                                                 <!-- Definuje položku zoznamu -->
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+        <li>Fifth Item</li>
+    </ul>
+
+    <div>
+    <img src="webdevelopment.jpg" alt="HTML + CSS + JAVA">
+    </div>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/aVgeJ5eqlSM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <footer>                                                                                                                               <!-- Definuje pätičku dokumentu alebo sekcie -->
+        <p>This is a footer.</p>
+    </footer>
+    
+    <blockquote cite="https://example.com">                                                                                                <!-- Definuje sekciu, ktorá je citovaná z iného zdroja -->
+        This is a blockquote.
+    </blockquote>
+    
+    <video width="320" height="240" controls>                                                                                               <!-- Definuje video obsah -->
+        <source src="movie.mp4" type="video/mp4">                                                                                           <!-- Definuje viacero médií pre picture, audio, video elementy -->
+        Your browser does not support the video tag.
+    </video>
+    
+    <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">                                                     <!-- Definuje kresliaci prvok, na letu, prostredníctvom skriptovania (obyčajne JavaScript) -->
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+
+    
+    <script> <!-- Definuje skript -->
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+    
+        // Nakreslenie tváre
+        ctx.beginPath();
+        ctx.arc(200, 200, 100, 0, Math.PI*2, true); // Vonkajší kruh
+        ctx.fillStyle = '#FFFF00'; // Žltá
+        ctx.fill();
+        ctx.stroke();
+    
+        // Ľavé oko
+        ctx.beginPath();
+        ctx.arc(150, 175, 20, 0, Math.PI*2, true); // Ľavé oko
+        ctx.fillStyle = 'black'; // Black
+        ctx.fill();
+    
+        // Pravé oko
+        ctx.beginPath();
+        ctx.arc(250, 175, 20, 0, Math.PI*2, true); // Pravé oko
+        ctx.fillStyle = 'black'; // Black
+        ctx.fill();
+    
+        // Nakresliť úsmev
+        ctx.beginPath();
+        ctx.arc(200, 200, 60, 0, Math.PI, false);  // ústa
+        ctx.stroke();
+
+
+// ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+
+// Pojdime vysvetliť, čo robí každý parameter:
+
+// x a y: Tieto parametre definujú súradnice stredu kruhu.
+
+// radius: Toto je polomer kruhu.
+
+// startAngle a endAngle: Tieto parametre definujú začiatočný a koncový uhol oblúka, v radiánoch.
+
+// anticlockwise: Toto je Boolovská hodnota, ktorá definuje smer, v ktorom sa kreslí oblúk. Ak je true, oblúk sa kreslí proti smeru hodinových ručičiek; ak je false (alebo nie je zahrnuté), oblúk sa kreslí v smere hodinových ručičiek.
+
+// V prípade ctx.arc(200, 200, 60, 0, Math.PI, false);, to znamená:
+
+// x a y sú oba 200, takže stred kruhu bude v bode (200, 200) na plátne.
+
+// Polomer kruhu je 60.
+
+// Oblúk začína pod uhlom 0 (čo je ekvivalentné s 3 hodinami na ciferníku hodín, ak si predstavíme stred plátna ako stred hodín).
+
+// Oblúk končí pod uhlom Math.PI, čo je ekvivalentné s π radiánmi alebo 180 stupňami (alebo 9 hodinami na ciferníku hodín).
+
+// Hodnota false pre parameter anticlockwise znamená, že oblúk sa kreslí v smere hodinových ručičiek.
+
+// Táto kombinácia parametrov vytvorí spodnú polovicu kruhu, alebo polkruh. V kontexte príkladu so smajlíkom tento oblúk reprezentuje úsmev.
+    </script>
+
+
+<form action="/submit_form" method="post">                          <!-- Definuje formulár, ktorý po odoslaní pošle údaje na adresu "/submit_form" pomocou HTTP metódy POST Formuláre v HTML sú navrhnuté tak, aby odosielali údaje na server pomocou HTTP metód, ako sú GET a POST. Tieto údaje sú potom spracované na serveri a môžu byť napríklad uložené do databázy alebo odoslané emailom pomocou server-side jazyka, ako je PHP, Python, Node.js atď.-->
+    <label for="fname">Meno:</label><br>                            <!-- Element label definuje popisok pre vstupný prvok. Atribút 'for' odkazuje na id prvku, ktorý má byť popísaný -->
+    <input type="text" id="fname" name="fname">                     <!-- Element input s atribútom 'type' nastaveným na 'text' definuje textové vstupné pole. 'id' a 'name' sú unikátne identifikátory -->
+    <label for="lname">Priezvisko:</label><br>
+    <input type="text" id="lname" name="lname">
+    <input type="submit" value="Odoslať">                           <!-- Element input s atribútom 'type' nastaveným na 'submit' definuje tlačidlo pre odoslanie formulára. 'value' je text, ktorý sa zobrazí na tlačidle -->
+</form>
+
+
+
+    <input type="password" id="pass" name="password">              <!-- Definuje pole pre heslo, kde vstupné znaky sú maskované (zobrazia sa ako bodky alebo hviezdičky) -->
+    <input type="radio" id="male" name="gender" value="male">      <!-- Definuje rádiotlačítko, ktoré umožňuje užívateľovi vybrať jednu možnosť z preddefinovanej skupiny -->
+    <input type="checkbox" id="option1" name="option1" value="1">  <!-- Definuje zaškrtávacie políčko, ktoré umožňuje užívateľovi vybrať nulovú, jednu alebo viacero možností z preddefinovanej skupiny -->
+    <input type="file" id="myfile" name="myfile">   
+
+    <button>Click me</button>                                       <!-- Definuje tlačidlo -->
+    
+    <select>                                                        <!-- Definuje rozbaľovací zoznam -->
+        <option value="1">Option 1</option>                         <!-- Definuje možnosti, ktoré môžu byť vybrané v rámci rozbaľovacieho zoznamu -->
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+    </select>
+
+    <div>
+        <textarea rows="4" cols="50"></textarea>   
+    </div>              
+
+
+    </body>
+    </html>
